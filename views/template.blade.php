@@ -46,6 +46,14 @@
           <span>Mochammad Rizqi Kurniawan</span></a>
       </li>
 
+      <hr class="sidebar-divider">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{ route('kabupaten.create') }}">
+          <span>Tambah Data</span>
+        </a>
+      </li>
+
       <!-- Divider -->
       <hr class="sidebar-divider">
 
@@ -68,6 +76,7 @@
           </div>
         </div>
       </li>
+
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
@@ -142,7 +151,6 @@
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
     <div id="content">
-    qdqwudhqoiw
     @yield('content')
       </div>
       <!-- End of Main Content -->

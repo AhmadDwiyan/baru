@@ -18,6 +18,6 @@ Route:: get('/','ps@index');
 Route:: get('/1','clean@index');
 
 Route::get('/32', function () {
-    return view("create");
+    return view("login");
 });
 
