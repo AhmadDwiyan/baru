@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\ModelPembelian;
+use App\ModelBarang;
 use Validator;
 class Pembelian extends Controller
 {
@@ -47,6 +48,12 @@ class Pembelian extends Controller
         $data->jml = $request->jml;
         $data->total_harga = $request->total_harga;
         $data->save();
+        
+        //merubah stok ditambah dari controler barang
+        $databeli = ModelBarang::where('kd_barang', $request->kd_barang)->first();
+        $databeli->stok = $databeli->stok + $request->jml;
+        $databeli->save();
+
         return redirect()->route('pembelian.index')->with('alert_message', 'Berhasil menambah data!');
     }
     /**
