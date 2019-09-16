@@ -16,8 +16,24 @@ Route::get('/one', function () {
 });
 Route:: get('/','ps@index');
 Route:: get('/1','clean@index');
+Route::resource('kontak','Kontak');
 
-Route::get('/32', function () {
-    return view("login");
-});
+// Route::get('/88', function(){
+//     return view('login');
+// });
+Route::resource('/kabupaten', 'Kabupaten');
+
+Route::resource('/penjualan', 'Penjualan');
+
+Route::resource('/barang', 'Barang');
+
+Route::resource('/pembelian', 'Pembelian');
+
+Route::get('login','login@index');
+
+Route::post('login/cek','Login@cek');
+
+Route::get('/','Dashboard@index');
+
+Route::get('/logout','login@logout');
 
